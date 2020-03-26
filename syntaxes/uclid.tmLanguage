@@ -12,27 +12,45 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\bif\b|\belse\b|\bwhile\b|\case\b</string>
+			<string>\bif\b|\belse\b|\bwhile\b|\bcase\b|\besac\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bvar\b</string>
+			<string>\bvar\b|\binput\b|\boutput\b|\bsharedvar\b</string>
 			<key>name</key>
-			<string>keyword</string>
+			<string>variable</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bassert\b|\bassume\b|\binvariant\b</string>
 			<key>name</key>
-			<string>keyword.control</string>
+			<string>support.function</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bmodule\b|\btype\b|\benum\b</string>
+			<string>\binit\b|\bnext\b|\bcontrol\b</string>
 			<key>name</key>
-			<string>keyword.other</string>
+			<string>markup.bold</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\brequires\b|\breturns\b|\bensures\b|\bmodifies\b|\inline\b</string>
+			<key>name</key>
+			<string>storage.modifier</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bmodule\b|\btype\b|\bprocedure\b</string>
+			<key>name</key>
+			<string>support.type</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bcall\b</string>
+			<key>name</key>
+			<string>keyword.control</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -42,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binteger\b|\bboolean\b</string>
+			<string>\binteger\b|\bboolean\b|\benum\b|\brecord\b</string>
 			<key>name</key>
 			<string>storage.type</string>
 		</dict>
@@ -56,7 +74,7 @@
 			<key>match</key>
 			<string>\btrue\b|\bfalse\b</string>
 			<key>name</key>
-			<string>constant.numeric</string>
+			<string>constant.language</string>
 		</dict>
 		<dict>
 			<key>begin</key>

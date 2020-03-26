@@ -1,0 +1,75 @@
+{
+    "Module": {
+        "prefix": "module",
+        "body": [
+            "module ${1:ModuleName}",
+            "{",
+            "    // types",
+            "    // fields",
+            "    // procedures",
+            "    init",
+            "    {",
+            "        $0",
+            "    }",
+            "    next",
+            "    {",
+            "        $0",
+            "    }",
+            "    // spec",
+            "    control",
+            "    {",
+            "        $0",
+            "    }",
+            "}"
+        ],
+        "description": "Module"
+    },
+    "Declare Type":{
+        "prefix": "type",
+        "body":[
+            "type ${1:type} = $0;"
+        ],
+        "description": "Declare Type"
+    },
+    
+    "Enum":{
+        "prefix": "enum",
+        "body":[
+            "enum ${1:name} {",
+            "    ${2:item} = ${3:value},",
+            "    $0",
+            "}"
+        ],
+        "description": "Declare Enum"
+    },
+    
+    "If":{
+        "prefix": "if",
+        "body":[
+            "if (${1:expr}) {",
+            "    $0",
+            "}"
+        ],
+        "description": "If"
+    },
+
+    "If Else":{
+        "prefix": "if",
+        "body":[
+            "if (${1:expr}) {",
+            "    $0",
+            "} else if (${2:expr2}) {",
+            "}"
+        ],
+        "description": "If Else"
+    },
+
+    "Var":{
+        "prefix": "var",
+        "body":[
+            "var ${1:name} : ${2:type};"            
+        ],
+        "description": "Declare Variable"
+    }
+
+}

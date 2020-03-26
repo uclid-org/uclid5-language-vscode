@@ -1,0 +1,48 @@
+{
+    "name": "uclid-language",
+    "displayName": "uclid Language: Syntax Highlighting",
+    "description": "The uclid programming language ",
+    "version": "0.0.1",
+    "publisher": "FedericoAureliano",
+    "icon": "images/uclid.png",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "homepage": "https://github.com/FedericoAureliano/uclid-language-vscode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FedericoAureliano/uclid-language-vscode.git"
+    },
+    "license": "https://github.com/uclid-org/uclid/blob/master/LICENSE",
+    "contributes": {
+        "languages": [
+            {
+                "id": "uclid",
+                "aliases": [
+                    "uclid language",
+                    "uclid"
+                ],
+                "extensions": [
+                    ".ucl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "uclid",
+                "scopeName": "source.ucl",
+                "path": "./syntaxes/uclid.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "uclid",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

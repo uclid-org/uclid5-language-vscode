@@ -36,7 +36,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\brequires\b|\breturns\b|\bensures\b|\bmodifies\b|\inline\b</string>
+			<string>\brequires\b|\bensures\b|\bmodifies\b</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\breturns\b|\binline\b</string>
 			<key>name</key>
 			<string>storage.modifier</string>
 		</dict>

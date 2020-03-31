@@ -24,7 +24,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bassert\b|\bassume\b|\binvariant\b</string>
+			<string>\bassert\b|\bassume\b|\binvariant\b|\baxiom\b</string>
 			<key>name</key>
 			<string>support.function</string>
 		</dict>
@@ -48,13 +48,19 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bmodule\b|\btype\b|\bprocedure\b</string>
+			<string>\bmodule\b|\btype\b|\bprocedure\b|\bdefine\b|\bfunction\b|\bsynthesis\b</string>
 			<key>name</key>
 			<string>support.type</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bcall\b</string>
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>

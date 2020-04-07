@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\breturns\b|\binline\b</string>
+			<string>\breturns\b|\binline\b|\bnoinline\b</string>
 			<key>name</key>
 			<string>storage.modifier</string>
 		</dict>
@@ -60,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b</string>
+			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b|\bverify\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>

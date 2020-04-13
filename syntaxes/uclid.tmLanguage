@@ -24,7 +24,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bassert\b|\bassume\b|\binvariant\b|\baxiom\b</string>
+			<string>\bassert\b|\bassume\b|\binvariant\b|\baxiom\b|\bproperty\b|\bhavoc\b</string>
 			<key>name</key>
 			<string>support.function</string>
 		</dict>
@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\breturns\b|\binline\b|\bnoinline\b</string>
+			<string>\breturns\b|\binline\b|\bnoinline\b|\bLTL\b</string>
 			<key>name</key>
 			<string>storage.modifier</string>
 		</dict>

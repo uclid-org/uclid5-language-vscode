@@ -60,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b|\bverify\b</string>
+			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b|\bverify\b|\bbmc\b|\bunroll\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>

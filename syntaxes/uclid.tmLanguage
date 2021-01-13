@@ -48,7 +48,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bmodule\b|\btype\b|\bprocedure\b|\bdefine\b|\bfunction\b|\bsynthesis\b</string>
+			<string>\bmodule\b|\btype\b|\bprocedure\b|\bdefine\b|\bfunction\b|\bsynthesis\b|\blet\b</string>
 			<key>name</key>
 			<string>support.type</string>
 		</dict>
@@ -60,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binduction\b|\bcheck\b|\bprint_results\b|\bprint_cex\b|\bverify\b|\bbmc\b|\bunroll\b</string>
+			<string>\binduction\b|\bcheck\b|\btrace\b|\bprint_results\b|\bset_solver_option\b|\bprint_cex\b|\bverify\b|\bbmc\b|\bunroll\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>

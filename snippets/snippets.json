@@ -9,16 +9,16 @@
             "    // procedures",
             "    init",
             "    {",
-            "        $0",
+            "        $2",
             "    }",
             "    next",
             "    {",
-            "        $0",
+            "        $3",
             "    }",
             "    // spec",
             "    control",
             "    {",
-            "        $0",
+            "        $4",
             "    }",
             "}"
         ],
@@ -27,11 +27,40 @@
     "Declare Type":{
         "prefix": "type",
         "body":[
-            "type ${1:type} = $0;"
+            "type ${1:typename} = $0;"
         ],
         "description": "Declare Type"
     },
-    
+    "Declare Abstract Datatype":{
+        "prefix": "datatype",
+        "body":[
+            "datatype ${1:typename} = $0;"
+        ],
+        "description": "Declare Abstract Datatype"
+    },
+
+    "Integer" : {
+        "prefix": "integer",
+        "body":[
+            "integer"
+        ],
+        "description": "Integer Type"
+    },
+    "Boolean" : {
+        "prefix": "boolean",
+        "body":[
+            "boolean"
+        ],
+        "description": "Boolean Type"
+    },
+    "Bitvector" : {
+        "prefix": "bv",
+        "body": [
+            "bv${1:width}"
+        ],
+        "description": "Bitvector Type"
+    },
+
     "Enum":{
         "prefix": "enum",
         "body":[
@@ -64,12 +93,172 @@
         "description": "If Else"
     },
 
+    "Assume":{
+        "prefix": "assume",
+        "body":[
+            "assume (${1:expr});"
+        ],
+        "description": "Assume Statement"
+    },
+    "Assert":{
+        "prefix": "assert",
+        "body":[
+            "assert (${1:expr});"
+        ],
+        "description": "Assert Statement"
+    },
+    "Havoc":{
+        "prefix": "havoc",
+        "body":[
+            "havoc ${1:variable};"
+        ],
+        "description": "Havoc Statement"
+    },
+
     "Var":{
         "prefix": "var",
         "body":[
             "var ${1:name} : ${2:type};"            
         ],
         "description": "Declare Variable"
+    },
+
+    "Group": {
+        "prefix": "group",
+        "body": [
+            "group ${1:name} : ${2:type} = { ${3:elements} };"
+        ],
+        "description": "Group Definition"
+    },
+
+    "Procedure": {
+        "prefix": "procedure",
+        "body": [
+            "procedure ${1:procedurename} ()",
+            "    returns (${2:typedvarlist})",
+            "    modifies (${3:varlist});",
+            "    ensures (${4:expr});",
+            "    requires (${5:expr});",
+            "{",
+            "    // body",
+            "    $6",
+            "}"
+        ],
+        "description": "Procedure Definition"
+    },
+
+    "Property":{
+        "prefix": "property",
+        "body":[
+            "property ${1:propertyname} : ${2:expr};"            
+        ],
+        "description": "Specify Property"
+    },
+
+    "Invariant":{
+        "prefix": "invariant",
+        "body":[
+            "invariant ${1:invariantname} : ${2:expr};"            
+        ],
+        "description": "Specify Invariant"
+    },
+
+    "Axiom":{
+        "prefix": "axiom",
+        "body":[
+            "axiom ${1:axiomname} : ${2:expr};"
+        ],
+        "description": "Specify Axiom"
+    },
+
+    "Print CEX":{
+        "prefix": "print_cex",
+        "body":[
+            "print_cex (${1:varlist});"
+        ],
+        "description": "Print Counterexample to STDOUT"
+    },
+
+    "Print CEX JSON":{
+        "prefix": "print_cex_json",
+        "body":[
+            "print_cex_json (${1:varlist});"
+        ],
+        "description": "Print Counterexample to JSON File"
+    },
+
+    "Check":{
+        "prefix": "check",
+        "body":[
+            "check;"
+        ],
+        "description": "Check Properties (optionally specifying an engine)"
+    },
+
+
+    "Bitvector Left Shift" : {
+        "prefix": "bv_left_shift",
+        "body": [
+            "bv_left_shift(${1:shamt}, ${2:shiftee})"
+        ],
+        "description": "Bitvector Left Shift"
+    },
+    "Bitvector Arith Right Shift" : {
+        "prefix": "bv_a_right_shift",
+        "body": [
+            "bv_a_right_shift(${1:shamt}, ${2:shiftee})"
+        ],
+        "description": "Bitvector Arithmetic Right Shift"
+    },
+    "Bitvector Logical Right Shift" : {
+        "prefix": "bv_l_right_shift",
+        "body": [
+            "bv_l_right_shift(${1:shamt}, ${2:shiftee})"
+        ],
+        "description": "Bitvector Logical Right Shift"
+    },
+    "Constant Array" : {
+        "prefix": "const",
+        "body": [
+            "const(${1:value}, ${2:arraytype})"
+        ],
+        "description": "Constant Array"
+    },
+    "Constant Record" : {
+        "prefix": "const_record",
+        "body": [
+            "const_record(${1:key} := ${2:value})"
+        ],
+        "description": "Constant Record"
+    },
+    "Forall Quantification" : {
+        "prefix": "forall",
+        "body": [
+            "forall (${1:iterator}: ${2:type}) :: (${3:expr})"
+        ],
+        "description": "Universal (Forall) Quantification"
+    },
+    "Exists Quantification" : {
+        "prefix": "exists",
+        "body": [
+            "exists (${1:iterator}: ${2:type}) :: (${3:expr})"
+        ],
+        "description": "Existential (Exists) Quantification"
+    },
+
+    "Finite Forall Quantification" : {
+        "prefix": "finite_forall",
+        "body": [
+            "finite_forall (${1:iterator}: ${2:type}) in ${3:groupname} :: (${4:expr})"
+        ],
+        "description": "Finite Universal (Forall) Quantification Over a Group"
+    },
+    "Finite Exists Quantification" : {
+        "prefix": "finite_exists",
+        "body": [
+            "finite_exists (${1:iterator}: ${2:type}) in ${3:groupname} :: (${4:expr})"
+        ],
+        "description": "Finite Existential (Exists) Quantification Over a Group"
     }
 
 }

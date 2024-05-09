@@ -18,7 +18,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bvar\b|\binput\b|\boutput\b|\bsharedvar\b|\binstance\b|\bconst\b</string>
+			<string>\bforall\b|\bexists\b|\bfinite_forall\b|\bfinite_exists\b|\bconst\b|\bconst_record\b|\bbv_left_shift\b|\bbv_a_right_shift\b|\bbv_l_right_shift\b</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bvar\b|\binput\b|\boutput\b|\bsharedvar\b|\binstance\b|\bconst\b|\bgroup\b</string>
 			<key>name</key>
 			<string>variable</string>
 		</dict>
@@ -48,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\bmodule\b|\btype\b|\bprocedure\b|\bdefine\b|\bfunction\b|\bsynthesis\b|\blet\b</string>
+			<string>\bmodule\b|\btype\b|\bdatatype\b|\bprocedure\b|\bdefine\b|\bfunction\b|\bsynthesis\b|\blet\b</string>
 			<key>name</key>
 			<string>support.type</string>
 		</dict>
@@ -60,7 +66,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binduction\b|\bcheck\b|\btrace\b|\bprint_results\b|\bset_solver_option\b|\bprint_cex\b|\bverify\b|\bbmc\b|\bunroll\b</string>
+			<string>\binduction\b|\bcheck\b|\btrace\b|\bprint_results\b|\bset_solver_option\b|\bprint_cex\b|\bprint_cex_json\b|\bverify\b|\bbmc\b|\bunroll\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
@@ -72,7 +78,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\binteger\b|\bboolean\b|\benum\b|\brecord\b</string>
+			<string>\binteger\b|\bboolean\b|\benum\b|\brecord\b|\bsingle|\bdouble|\bhalf\b</string>
 			<key>name</key>
 			<string>storage.type</string>
 		</dict>
